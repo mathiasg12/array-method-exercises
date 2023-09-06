@@ -31,7 +31,16 @@ const buttons = [
     text: 'Button Text 3',
   },
 ];
-
-const buttonElements = null; // Replace null and add .map code here
-
+const htmlClass= document.querySelector(".x")
+const buttonElements = buttons.map((button)=>{
+  const text = button
+  const btn= document.createElement("button")
+  const textN= document.createTextNode(`${text}`)
+  btn.appendChild(textN);
+  return btn
+})
 console.log(buttonElements);
+
+
+
+

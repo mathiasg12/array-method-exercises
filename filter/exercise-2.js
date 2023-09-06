@@ -37,7 +37,15 @@ const users = [
     isVerified: false,
   },
 ];
-
-const filteredUsers = null; // Replace null and add .filter code here
-
+// enkle metoden 
+const filteredUsers = users.filter((people) => people.isAdmin && people.isVerified);
 console.log(filteredUsers);
+//drøye metoden
+const filterUserAgain = users.filter(
+  function(x){
+    if(x.isAdmin== true && x.isVerified== true){
+      return true
+    }
+  }
+) 
+console.log(filterUserAgain);

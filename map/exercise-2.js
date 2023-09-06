@@ -36,6 +36,13 @@ const people = [
   },
 ];
 
-const greetingMessages = null; // Replace null and add .map code here
-
+const greetingMessages = people.map((people)=>{
+  const {firstName,lastName}= people
+  return `Hello ${firstName} ${lastName}!`
+})
 console.log(greetingMessages);
+ //or
+ const greetingMessages2 = people.map((people)=>{
+  return `Hello ${people.firstName} ${people.lastName}!`
+})
+console.log(greetingMessages2);

@@ -14,7 +14,15 @@ you. Set this variable to the .map array method you created.
 */
 
 const values = [10, 20, 30, 40, 50, 100, 200, 300, 400, 500, 1000];
-
-const valuesBelow100 = null; // Replace null and add .filter code here
-
+//enkle metoden
+const valuesBelow100 = values.filter((num)=>num <= 100);
+//drøye metoden
+const valueBelow100= values.filter(
+ function sort(num){
+    if(num <= 100){
+        return true
+    }
+ }
+)
 console.log(valuesBelow100);
+console.log(valueBelow100);
