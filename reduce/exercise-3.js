@@ -39,6 +39,11 @@ const teams = [
   },
 ];
 
-const winningTeams = null; // Replace null and add .reduce code here
+const winningTeams = teams.reduce((reducedteams,team)=>{
+ if(team.isWinner === true){
+  reducedteams[team.name.toLocaleLowerCase()]= team.score
+ }
+ return reducedteams
+},{})
 
 console.log(winningTeams);
