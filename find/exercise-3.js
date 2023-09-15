@@ -14,8 +14,15 @@ You will need to find a todo that has the following properties:
   id: 43,
 
 */
-import { todos } from './exercise-3-data.js';
+import { todos } from "./exercise-3-data.js";
 
-const foundTodo = null; // Replace null and add .map code here
+const foundTodo = todos.find((blog) => {
+  if (blog.id === 43 && blog.userId === 3) {
+    return true;
+  }
+});
 
 console.log(foundTodo);
+//or simpler way
+const findTodo= todos.find((blog)=>(blog.id===43 && blog.userId===3));
+console.log(findTodo);

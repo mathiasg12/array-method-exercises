@@ -13,6 +13,9 @@ set the result of this to the supplied 'foundIndex' variable.
 const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Find the value of 5:
-const foundIndex = null; // Replace null and add .map code here
-
-console.log(valuesTimesTwo);
+const foundIndex = values.findIndex((value)=>{
+    if(value === 5){
+        return true;
+    }
+})
+console.log(foundIndex);
